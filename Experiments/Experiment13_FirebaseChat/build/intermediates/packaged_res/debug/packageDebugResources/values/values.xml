@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gcm_defaultSenderId" translatable="false">808135082446</string>
+    <string name="google_api_key" translatable="false">AIzaSyCm7p7OjTLEvhe14GqtZW31B_3qAFW-coE</string>
+    <string name="google_app_id" translatable="false">1:808135082446:android:6e96774e1db249c8eb2b9f</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCm7p7OjTLEvhe14GqtZW31B_3qAFW-coE</string>
+    <string name="google_storage_bucket" translatable="false">mpc-experiments-2026.firebasestorage.app</string>
+    <string name="project_id" translatable="false">mpc-experiments-2026</string>
+</resources>
