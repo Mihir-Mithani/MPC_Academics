@@ -12,8 +12,9 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,10 +26,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Bluetooth
-import androidx.compose.material.icons.filled.BluetoothConnected
-import androidx.compose.material.icons.filled.BluetoothDisabled
-import androidx.compose.material.icons.filled.BluetoothSearching
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -49,7 +47,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -68,7 +65,7 @@ fun BluetoothScannerTheme(content: @Composable () -> Unit) {
     )
 }
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     private var bluetoothAdapter: BluetoothAdapter? = null
     private var scanReceiver: BroadcastReceiver? = null
     private val PERMISSIONS = arrayOf(
@@ -174,7 +171,7 @@ class MainActivity : AppCompatActivity() {
         scanReceiver = null
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSION_REQUEST_CODE) {
             val allGranted = grantResults.all { it == PackageManager.PERMISSION_GRANTED }
@@ -254,7 +251,7 @@ fun BluetoothScannerScreen(
                         color = MaterialTheme.colorScheme.primary
                     )
                     Icon(
-                        imageVector = if (isBluetoothEnabled) Icons.Filled.BluetoothConnected else Icons.Filled.BluetoothDisabled,
+                        imageVector = if (isBluetoothEnabled) Icons.Filled.Info else Icons.Filled.Info,
                         contentDescription = "Bluetooth status",
                         tint = if (isBluetoothEnabled) Color.Green else Color.Red
                     )
@@ -268,7 +265,7 @@ fun BluetoothScannerScreen(
                 ) {
                     Button(onClick = onScanClick, enabled = isBluetoothEnabled && !isScanning) {
                         if (isScanning) {
-                            Icon(Icons.Filled.BluetoothSearching, contentDescription = "Scanning")
+                            Icon(Icons.Filled.Info, contentDescription = "Scanning")
                         } else {
                             Icon(Icons.Filled.Refresh, contentDescription = "Scan")
                         }
@@ -325,7 +322,7 @@ fun BluetoothDeviceCard(device: BluetoothDevice) {
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
-            Icon(Icons.Filled.Bluetooth, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+            Icon(Icons.Filled.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
         }
     }
 }
