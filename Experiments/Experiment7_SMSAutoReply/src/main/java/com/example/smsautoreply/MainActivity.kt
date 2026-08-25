@@ -11,8 +11,9 @@ import android.os.Bundle
 import android.provider.Telephony
 import android.telephony.SmsManager
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -37,7 +38,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -56,7 +56,7 @@ fun SMSAutoReplyTheme(content: @Composable () -> Unit) {
     )
 }
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     private var smsReceiver: SmsBroadcastReceiver? = null
     private val SMS_PERMISSIONS = arrayOf(
         Manifest.permission.RECEIVE_SMS,
@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
         smsReceiver = null
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSION_REQUEST_CODE) {
             val allGranted = grantResults.all { it == PackageManager.PERMISSION_GRANTED }
@@ -171,8 +171,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-@Composable
-fun SMSAutoReplyScreen(onPermissionClick: () -> Unit) {
+    @Composable
+    fun SMSAutoReplyScreen(onPermissionClick: () -> Unit) {
     var isAutoReplyEnabled by remember { mutableStateOf(false) }
     val context = LocalContext.current
 
