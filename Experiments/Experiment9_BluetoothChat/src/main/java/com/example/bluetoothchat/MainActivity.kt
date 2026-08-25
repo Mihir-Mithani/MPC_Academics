@@ -16,8 +16,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -47,7 +48,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -70,7 +70,7 @@ fun BluetoothChatTheme(content: @Composable () -> Unit) {
     )
 }
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     private var bluetoothAdapter: BluetoothAdapter? = null
     private val APP_NAME = "BluetoothChat"
     private val MY_UUID = UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66")
