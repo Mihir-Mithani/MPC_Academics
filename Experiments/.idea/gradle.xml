@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="CHOOSE_PER_TEST" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Experiment10_WiFiSignal" />
+            <option value="$PROJECT_DIR$/Experiment11_GPSMaps" />
+            <option value="$PROJECT_DIR$/Experiment12_SensorDemo" />
+            <option value="$PROJECT_DIR$/Experiment13_FirebaseChat" />
+            <option value="$PROJECT_DIR$/Experiment14_MLKitFaceDetection" />
+            <option value="$PROJECT_DIR$/Experiment1_HelloWorld" />
+            <option value="$PROJECT_DIR$/Experiment6_QuoteApp" />
+            <option value="$PROJECT_DIR$/Experiment7_SMSAutoReply" />
+            <option value="$PROJECT_DIR$/Experiment8_BluetoothScanner" />
+            <option value="$PROJECT_DIR$/Experiment9_BluetoothChat" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
