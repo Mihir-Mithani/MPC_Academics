@@ -5,8 +5,10 @@ plugins {
     // Apply Android Gradle Plugin and Kotlin to all subprojects (using versions from catalog)
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
     alias(libs.plugins.ksp) apply false
     alias(libs.plugins.google.services) apply false
+    alias(libs.plugins.secrets) apply false
 }
 
 // Shared configuration for all subprojects
@@ -18,6 +20,7 @@ allprojects {
 // Configure common settings for all Android modules
 subprojects {
     pluginManager.withPlugin("com.android.application") {
+        apply(plugin = "org.jetbrains.kotlin.plugin.compose")
         extensions.configure<com.android.build.api.dsl.ApplicationExtension> {
             compileSdk = 34
 
@@ -35,10 +38,7 @@ subprojects {
             buildFeatures {
                 compose = true
             }
-            composeOptions {
-                kotlinCompilerExtensionVersion = "1.5.13"
-            }
-            packaging {
+            packagingOptions {
                 resources {
                     excludes += "/META-INF/{AL2.0,LGPL2.1}"
                 }
