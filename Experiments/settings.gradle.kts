@@ -22,6 +22,10 @@ rootProject.name = "MPC_Experiments"
 
 include(
     ":Experiment1_HelloWorld",
+    ":Experiment2_LoginActivity",
+    ":Experiment3_Calculator",
+    ":Experiment4_MultimediaPlayer",
+    ":Experiment5_DataPersistence",
     ":Experiment6_QuoteApp",
     ":Experiment7_SMSAutoReply",
     ":Experiment8_BluetoothScanner",
