@@ -2,8 +2,9 @@ package com.example.firebasechat
 
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,8 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Login
-import androidx.compose.material.icons.filled.Logout
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Send
 import androidx.compose.material3.Button
@@ -37,8 +37,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.setContent
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -62,7 +60,7 @@ fun FirebaseChatTheme(content: @Composable () -> Unit) {
     )
 }
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : ComponentActivity() {
     private var auth: FirebaseAuth? = null
     private var database: DatabaseReference? = null
     private var messagesListener: ValueEventListener? = null
@@ -206,12 +204,12 @@ fun ChatScreen(
                 Text(text = "Firebase Chat", fontSize = 24.sp, fontWeight = FontWeight.Bold)
                 if (MainActivity.isSignedIn) {
                     Button(onClick = onSignOutClick) {
-                        Icon(Icons.Default.Logout, contentDescription = null)
+                        Icon(Icons.Default.Info, contentDescription = null)
                         Text("Sign Out")
                     }
                 } else {
                     Button(onClick = onAuthClick) {
-                        Icon(Icons.Default.Login, contentDescription = null)
+                        Icon(Icons.Default.Info, contentDescription = null)
                         Text("Sign In")
                     }
                 }

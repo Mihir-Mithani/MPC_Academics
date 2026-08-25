@@ -3,12 +3,17 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.google.services)
+    alias(libs.plugins.secrets)
 }
 
 android {
     namespace = "com.example.firebasechat"
     defaultConfig {
         applicationId = "com.example.firebasechat"
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 }
 
@@ -17,7 +22,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
-    implementation(libs.androidx.compose.bom)
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
@@ -25,15 +30,15 @@ dependencies {
 
     // Firebase
     implementation(libs.firebase.bom)
-    implementation(libs.firebase.auth.ktx)
-    implementation(libs.firebase.database.ktx)
-    implementation(libs.firebase.analytics.ktx)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.database)
+    implementation(libs.firebase.analytics)
 
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso)
-    androidTestImplementation(libs.androidx.compose.bom)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
