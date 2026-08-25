@@ -5,11 +5,8 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@android:mipmap/ic_launcher"
         android:label="Experiment 4: Multimedia Player"
-        android:roundIcon="@android:mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:supportsRtl="true">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -20,5 +17,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
