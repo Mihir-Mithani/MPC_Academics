@@ -16,3 +16,13 @@ local.properties
 
 # Firebase keys
 **/google-services.json
+
+# Gradle wrapper
+gradlew
+gradlew.bat
+
+# Kotlin
+.kotlin/
+
+# Build reports
+build/reports/
