@@ -4,7 +4,7 @@
             "outputFile": "com.example.sensordemo.Experiment12_SensorDemo-mergeDebugResources-43:/values-ro/values-ro.xml",
             "map": [
                 {
-                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/791b2e61abd2506e72495e0bb5476859/transformed/core-1.13.0/res/values-ro/values-ro.xml",
+                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/992caeba5726cb95794b2af8ad9713c7/transformed/core-1.13.0/res/values-ro/values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/37ccc61409aeedc5ca609d47b6ec60ec/transformed/jetified-ui-release/res/values-ro/values-ro.xml",
+                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/8a3f9fd3b9adb94952b5990bcac1d76b/transformed/jetified-ui-release/res/values-ro/values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/dc8976d213dc33ca68ba61be05c80d98/transformed/jetified-material3-release/res/values-ro/values-ro.xml",
+                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/fc7eef94b3aabdce7e8dc93bc726f816/transformed/jetified-material3-release/res/values-ro/values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/0f4da4fec8c70bd74eb36b45b4935e94/transformed/jetified-foundation-release/res/values-ro/values-ro.xml",
+                    "source": "/Users/mihirmithani/.gradle/caches/9.3.0/transforms/94aa1ae078183a06afe0580d52216f88/transformed/jetified-foundation-release/res/values-ro/values-ro.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

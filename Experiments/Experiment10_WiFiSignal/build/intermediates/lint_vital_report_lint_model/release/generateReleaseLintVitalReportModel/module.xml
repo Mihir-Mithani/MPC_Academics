@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/mihirmithani/Downloads/SEM_7/MPC_Academics/Experiments/Experiment10_WiFiSignal"
+    name=":Experiment10_WiFiSignal"
+    type="APP"
+    maven="com.example.mpc:Experiment10_WiFiSignal:1.0.0"
+    agpVersion="8.5.0"
+    buildFolder="build"
+    bootClassPath="/Users/mihirmithani/Library/Android/sdk/platforms/android-34/android.jar:/Users/mihirmithani/Library/Android/sdk/build-tools/34.0.0/core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>
